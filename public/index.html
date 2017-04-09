@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Tic Tac Toe Game</title>
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />	
+
+	<meta charset="UTF-8">
+	<meta name="name" content="Tic Tac Toe Game">
+	<meta name="description" content="Free online multiplayer Tic Tac Toe developed by ynos1234 using Nodejs and socketIO.">
+	<meta name="keywords" content="Tic Tac Toe Online Game, Game, Tic Tac Toe Multiplayer">
+	<meta name="author" content="ynos1234, Sony Mathew">	
+
+	<script src="https://cdn.socket.io/socket.io-1.0.6.js"></script>
+	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-53286748-1', 'auto');
+		  ga('send', 'pageview');
+	</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<a href="http://tictactoe-ynos1234.rhcloud.com/">
+				<span class="header-left">Tic Tac Toe<span>
+			</a>		
+			<a href="https://github.com/ynos1234/Tic-Tac-Toe-NodeJS-SocketIO-Online-Game" target="_blank">
+				<span class="header-right"> Github <span>	
+			<!--</a>
+			<a href="http://in.linkedin.com/in/sonymathew" target="_blank">		
+				<span class="header-right"> Contact <span>	
+			</a>
+			<a href="http://goo.gl/5eydyW" target="_blank">		
+				<span class="header-right"> Report Bugs <span>	
+			</a>		-->
+		</div>
+
+
+		<div class="content">
+
+			<div class="init" id="init">
+				<input placeholder="Enter your username" type="text" name="name" id="name">
+				<button id="name-submit"> Submit </button>
+
+				<div id="clear" class="clear"></div>
+
+				<input placeholder="Game ID" type="text" name="gameId" id="game-id-box">
+
+				<button id="create-game"> Create New Game</button>
+				<button id="join-game"> Join Existing Game</button>
+
+			<!--	<button id="join-random-game">Join a Random Game</button> -->
+
+				<img src="./images/Preloader.gif" id="loader"/><br/>
+				<span id="loader-text">Waiting for users to connect . . . <span>
+
+
+			</div>	
+
+			<div class="arena" id="arena"> 
+				<div class="left stats">
+					<div class="user"> 
+						<div class="user-name active-user" id="user_1">
+							User 1
+						</div>
+						<div class="symbol user-1-cell"> O
+						</div>	
+					</div>
+
+					<div class="user">
+						<div class="user-name" id="user_2">
+							User 2
+						</div>
+						<div class="symbol user-2-cell"> X
+						</div>	
+					</div>
+
+					<div class="msg" id="msg">
+						Cool man you win
+					</div>
+
+					<div class="restart"> 
+						<button id="restart">Restart the Game</button>
+					</div>
+
+				</div>
+
+				<div class="right">	
+					<table id="board">
+						<tr>
+							<td id="c1" class="user-2-cell active"> 1</td>
+							<td id="c2" class="user-1-cell"> 2</td>
+							<td id="c3" class="active"> 3</td>
+						</tr>	
+						<tr>
+							<td id="c4"> 4</td>
+							<td id="c5"> 5</td>
+							<td id="c6"> 6</td>
+						</tr>	
+						<tr>
+							<td id="c7"> 7</td>
+							<td id="c8"> 8</td>
+							<td id="c9"> 9</td>
+						</tr>	
+					</table>
+				</div>		
+
+			</div>
+
+
+		</div>	
+
+		<script type="text/javascript" src="./js/tic.tac.toe.js"></script>
+	</body>
+</html>

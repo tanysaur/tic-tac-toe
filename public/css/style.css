@@ -1,0 +1,296 @@
+html {
+	background-image: url('../images/2.jpg');
+}
+
+body {
+	opacity: 0.95;
+	width: 100%;
+	font-family: Helvetica;
+	margin: auto;
+	padding: 0px 100px 100px 20px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;	
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.content {
+	width: 60%;
+	margin: auto;
+	box-sizing : border-box;
+	margin-top: 100px;
+}
+
+.header, .arena {
+	width: 100%;
+	border: 1px solid grey;
+	border-radius: 4px;
+} 
+
+
+.header {
+	color: #00b7ea;
+	background: black;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	/*padding-left: 30px;*/
+	height: 65px;
+	padding: 20px 20px 8px 40px;
+	font-size: 22px;
+	border-radius: 0px;
+	box-sizing : border-box;
+	font-family: "ITC Eras Light", Helvetica;
+	font-weight: lighter;
+}
+
+
+.header .header-right{
+	float: right;
+	font-size: 13px;
+	color:deepskyblue;
+	padding-right: 30px;
+	padding-top: 5px;
+}
+
+.header .header-right:hover {
+	color: #8fc400;
+}
+
+.left, .right {
+	width: 45%;
+	/*display: inline-block;*/
+	float: left;
+}
+
+.left {
+	margin-right: 5%;
+}
+.stats .user {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 10px;
+	/*border: 1px solid yellow;*/
+	color: #00b7ea;
+	box-sizing : border-box;
+}
+
+.stats .msg {
+	width: 88%;
+	float: left;
+	margin-top: 30px;
+	height: 100px;
+	/*border: 1px solid red;*/
+	padding: 10px;
+	font-size: 20px;
+	/*border: 1px solid grey;*/
+	border-radius: 5px;
+	margin: 10px;
+	color: #00b7ea;
+	text-shadow:1px 1px grey;
+}
+
+.stats .restart {
+	width: 100%;
+}
+
+.stats .restart button {
+	width: 95%;
+	padding: 10px;
+	border-radius: 5px;
+	background: #d04f3a;
+	color: white;
+	font-size: 16px;
+	border: none;
+	margin: 10px 10px 0px 10px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.stats .restart button:hover {
+	cursor: pointer;
+}
+.stats .user .user-name {
+	width: 70%;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	padding: 8px;
+	border-radius: 5px;
+	font-size: 20px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.active-user {
+	color: white;
+	background-color: #fda737;
+}
+
+.active-user-1 {
+	color: white;
+	background-color: #00b7ea;
+}
+
+.active-user-2 {
+	color: white;
+	background-color: #8fc400;
+}
+
+.stats .user .symbol {
+	border-radius: 5px;
+	width : 17%;
+	float: right;
+	text-align: center;
+	padding: 8px;
+	display: inline-block;
+	color: white;
+	font-size: 20px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.arena {
+	margin-top: 30px;
+	padding: 20px;
+	overflow: hidden;
+	box-sizing : border-box;
+	/*box-shadow: 5px 5px 5px #888888;*/
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.arena table{
+	text-align: center;
+	margin: auto;
+	border-collapse: separate;
+	overflow: hidden;
+}
+
+.arena table tr td {
+	margin: 20px;
+	margin-right: 5px;
+	padding: 30px; 
+    border-radius:4px;
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    color:black;
+    line-height: 40px;
+    text-shadow:0px 1px 0px rgba(255,255,255,.4);
+    border: 1px solid lightgrey;
+    /*cursor: pointer;*/
+    color: white;
+}
+
+/*blue color*/
+.user-1-cell {
+	background: #00b7ea; 
+}
+
+/*green color*/
+.user-2-cell {
+	background: #8fc400; 
+}
+
+.won-cell {
+	background: #FF9900;
+}
+
+.user-1-cell:hover, .user-2-cell, .won-cell {
+	cursor: not-allowed;
+}
+
+
+.arena table tr .active:hover {
+	background: #fd7037;
+	cursor: pointer;
+}
+
+
+.init {
+	padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    text-align: center;
+    border-radius: 10px;
+	background-color: white;
+}
+
+.init input {
+	padding: 10px;
+	font-size:  28px;
+	border-radius: 4px;
+	border: 1px solid grey;
+	margin-right: 30px;
+	text-align: center;
+}
+
+.init input[disabled] {
+	color: #00b7ea;
+	border: 1px solid lightgrey;
+}
+
+.init button{
+	padding: 10px;
+	font-size: 20px;
+	color: white;
+	background-color: #00b7ea;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	font-weight: lighter;
+}
+
+.init button:hover {
+	background-color: #8fc400;
+}
+
+.init #name-submit{
+	font-size: 28px;
+}
+
+.init #join-random-game {
+	margin-top: 30px;
+	width:100%;
+}
+
+.init #loader, .init #loader-text {
+	color: lightcoral;
+	text-align: center;
+
+}
+
+.init #loader {
+	margin-left: 100px;
+	margin-top: 30px;
+}
+
+.init #loader-text {
+	overflow: hidden;
+}
+
+.hide {
+	display: none;
+}
+
+.showIB {
+	display: inline-block;
+}
+
+.showB {
+	display: block;
+}
+
+.clear {
+	width: 100%;
+	height: 2px;
+}
