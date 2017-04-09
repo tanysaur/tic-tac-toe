@@ -17,8 +17,9 @@ var Game = {
 	WinningCase 	: 0
 };
 
-var socket = io('ws://tictactoe-ynos1234.rhcloud.com:8000');
+//var socket = io('ws://tictactoe-ynos1234.rhcloud.com:8000');
 
+var socket = io("ws://calm-river-80763.herokuapp.com/:8000")
 var Me = 0,
 	MyId = 0,
 	playerDisable = true,
